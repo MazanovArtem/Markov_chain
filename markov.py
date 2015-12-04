@@ -167,12 +167,10 @@ def generate_text(probabilities, text_size):
 if __name__ == '__main__':
 	data = read_data(".\corpus")
 	probability = count_probabilities(data)
-	#save_data(probability, "json_data.json")
-	#loaded_data = load_data("json_data.json")
+	save_data(probability, "json_data.json")
+	loaded_data = load_data("json_data.json")
 
-	#print probability[tuple()]
-	text = generate_text(probability, 10100)
-	#text = generate_text(loaded_data, 10010)
+	text = generate_text(loaded_data, 10010)
 
 	f = open('result.txt', 'w')
 	f.write(text)
