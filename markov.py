@@ -160,7 +160,6 @@ def generate_text(probabilities, text_size):
                 history = history[-2:]
                 break
             current_probability += probability
-        #print i
     return normalize_text(tokens)
 
 
